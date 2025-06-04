@@ -1,0 +1,71 @@
+* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: black;
+  }
+  
+  /* Sidebar */
+  aside {
+    height: 100vh;
+  }
+  
+  .nav-link {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .nav-link:hover {
+    background-color: #1db954;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  main h1 {
+    font-weight: 700;
+  }
+  
+  .card {
+    border: none;
+    background-color: #1c1c1c;
+    margin-top:10px;
+
+  }
+  
+  .card-title {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .card-text {
+    color: #b3b3b3;
+  
+  }
+  .music-player img {
+    object-fit: cover;
+  }
+  
+  
+  /* Style for the volume slider */
+#volume-slider {
+  width: 200px;
+}
+
+#volume-value {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+  
+
+  
+  /* Footer */
+  footer {
+    background-color: black;
+    color: #b3b3b3;
+  }

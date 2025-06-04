@@ -1,0 +1,223 @@
+/* General Styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navbar */
+  /* Navbar */
+  .navbar {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;  /* Vertically align the items */
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Keeps navbar on top */
+    height: 50px;
+    box-sizing: border-box;
+  }
+  
+  .navbar .icon {
+    height: 30px; /* Adjust icon size */
+    width: auto;
+  }
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .spotify-heading {
+    margin-left: 10px; /* Adds some space between the icon and the heading */
+    font-size: 1.5rem; /* Adjust as needed */
+    color: #1DB954; /* Spotify's green color */
+    font-weight: bold;
+  }
+  
+  
+  .search-section {
+    display: flex;
+    align-items: center;  /* Vertically align search input and home icon */
+  }
+  
+  .search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+  }
+  
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #1db954;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .auth-buttons .signup-btn {
+    background-color: #333;
+  }
+  
+  /* Home Logo */
+  .navbar img.icon:first-child {
+    height: 40px; /* Ensure the home logo is properly sized */
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  /* Align both icons within the search section */
+  .search-section img.icon {
+    height: 30px; /* Adjust home icon size */
+    width: auto;
+    margin-right: 10px;  /* Ensure there's space between the icons */
+  }
+  
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #2f2f2f;
+    padding: 20px;
+    color: #fff;
+    position: fixed;
+    top: 50px; /* Below navbar */
+    bottom: 0;
+    left: 0;
+    height: calc(100vh - 50px); /* Full screen height minus navbar height */
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+  /* Sidebar Buttons */
+  .sidebar ul li {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul li button {
+    color: pink;
+    font-weight:bold;
+    font-style:italic;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color:white; /* Button-like appearance */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded edges */
+    text-align: center; /* Center-align the text */
+    cursor: pointer; /* Pointer cursor for buttons */
+    width: 100%; /* Full width for a uniform look */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .sidebar ul li button:hover {
+    background-color: #1db954; /* Spotify's green for hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  .sidebar ul li button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+    box-shadow: none; /* Remove shadow on click */
+  }
+  
+  
+  /* Main Content */
+  .main-content {
+    padding: 10px;
+    margin-left: 250px; /* Sidebar width */
+    margin-top: 50px; /* Space for navbar */
+    background-color: #f4f4f4;
+    overflow-y: auto;
+    height: calc(100vh - 70px); /* Full screen height minus navbar height */
+    box-sizing: border-box;
+  }
+  
+  /* Popular Artists Section */
+  .artist-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 0; /* Remove the gap above Popular Artists */
+  }
+  
+  /* Styling for artist images to make them rounded */
+  .artist, .album {
+    text-align: center;
+    flex: 1 1 calc(33% - 20px); /* Flex to make items fit, 3 items per row */
+  }
+  
+  .artist-img, .album-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .artist-section .artist-img {
+    border-radius: 50%; /* Make the image rounded */
+    width: 200px; /* Ensure a fixed width */
+    height: 200px; /* Ensure a fixed height */
+    object-fit: cover; /* Ensures image covers circular area without stretching */
+    margin: 10px;
+  }
+  
+  h4 {
+    font-size: 24px;
+    margin:0;
+    padding-top:10px;
+  }
+  
+  /* Popular Albums Section */
+  .album-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures the items are spaced out evenly */
+    gap:10px; /* Adds a gap between each album */
+    margin-top:15px; /* Remove the gap between album section */
+  }
+  
+  /* Styling for each album */
+  .album {
+    text-align: center;
+    flex: 1 1 calc(20% - 20px); /* Ensures each album takes 1/5th of the width */
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the album images */
+  .album-img {
+    width: 150px;  /* Fixed width for album images */
+    height: 150px;  /* Fixed height for album images */
+    object-fit: cover;  /* Ensures the images fit without distortion */
+    border-radius: 8px;  /* Adds rounded corners to album images */
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .album {
+      flex: 1 1 calc(33.33% - 20px); /* For medium-sized screens, show 3 per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .album {
+      flex: 1 1 100%;  /* For small screens, show one album per row */
+    }
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding:5px;
+    width: 100%;
+    margin-top: auto;
+  }
